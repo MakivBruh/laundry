@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><title>LaundryKost - Laundry Praktis Mahasiswa &amp; Anak Kos</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-variant":"#e0e3e5","inverse-surface":"#2d3133","primary-fixed":"#cce5ff","error-container":"#ffdad6","surface-container-lowest":"#ffffff","on-tertiary-container":"#f4fffc","on-surface-variant":"#3f4850","on-secondary-fixed-variant":"#3f465c","on-secondary-fixed":"#131b2e","on-primary-container":"#fdfcff","on-tertiary-fixed-variant":"#005049","on-error-container":"#93000a","error":"#ba1a1a","outline":"#707881","on-secondary":"#ffffff","surface-container-highest":"#e0e3e5","on-surface":"#191c1e","inverse-on-surface":"#eff1f3","tertiary-container":"#008378","tertiary-fixed":"#89f5e7","secondary-container":"#dae2fd","secondary-fixed":"#dae2fd","inverse-primary":"#93ccff","on-primary":"#ffffff","primary-container":"#007bb9","surface":"#f7f9fb","on-primary-fixed":"#001d31","surface-bright":"#f7f9fb","surface-container-high":"#e6e8ea","on-background":"#191c1e","surface-container-low":"#f2f4f6","on-tertiary-fixed":"#00201d","on-tertiary":"#ffffff","on-secondary-container":"#5c647a","tertiary-fixed-dim":"#6bd8cb","on-primary-fixed-variant":"#004b73","surface-dim":"#d8dadc","outline-variant":"#bfc7d2","primary-fixed-dim":"#93ccff","primary":"#006194","on-error":"#ffffff","surface-tint":"#006398","tertiary":"#00685f","secondary-fixed-dim":"#bec6e0","background":"#f7f9fb","surface-container":"#eceef0","secondary":"#565e74"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"margin-md":"2rem","space-xl":"2.5rem","gutter-md":"1.5rem",margin:"1rem","margin-lg":"3.5rem",gutter:"1rem","space-sm":"0.5rem","gutter-lg":"2rem","space-md":"1rem","space-lg":"1.5rem","space-xs":"0.25rem"},fontFamily:{"headline-sm":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"title-md":["Plus Jakarta Sans"],"display-lg":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"]},fontSize:{"headline-sm":["20px",{lineHeight:"28px",fontWeight:"600"}],"headline-lg-mobile":["28px",{lineHeight:"36px",letterSpacing:"-0.02em",fontWeight:"700"}],"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.02em",fontWeight:"700"}],"title-md":["18px",{lineHeight:"26px",fontWeight:"600"}],"display-lg":["48px",{lineHeight:"56px",letterSpacing:"-0.03em",fontWeight:"800"}],"label-lg":["14px",{lineHeight:"20px",letterSpacing:"0.01em",fontWeight:"600"}],"body-lg":["16px",{lineHeight:"26px",fontWeight:"400"}],"headline-md":["24px",{lineHeight:"32px",letterSpacing:"-0.015em",fontWeight:"700"}],"body-md":["14px",{lineHeight:"22px",fontWeight:"400"}],"headline-lg":["36px",{lineHeight:"44px",letterSpacing:"-0.02em",fontWeight:"700"}],"body-sm":["12px",{lineHeight:"18px",fontWeight:"400"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.03em",fontWeight:"700"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased"><header class="sticky top-0 z-50 w-full bg-surface-container-lowest/80 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)] border-b border-surface-container-highest/60"><div class="h-16 w-full px-margin lg:px-margin-lg flex items-center justify-between"><a class="flex items-center gap-space-sm text-primary group" data-path="landing-page" href="#"><div class="w-9 h-9 rounded-xl bg-primary-fixed flex items-center justify-center text-primary shadow-sm"><span class="material-symbols-outlined text-[22px]">local_laundry_service</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm font-bold tracking-tight text-primary leading-tight">LaundryKost</span></div></a><div class="flex items-center gap-space-lg"><nav class="hidden sm:flex items-center gap-space-lg" data-active-classes="text-primary font-label-lg font-bold"><a aria-current="page" class="transition-colors duration-150 text-primary font-label-lg font-bold" data-path="landing-page" href="#layanan">Layanan</a><a aria-current="page" class="transition-colors duration-150 text-primary font-label-lg font-bold" data-path="landing-page" href="#harga">Harga</a></nav><a class="inline-flex items-center justify-center px-space-md py-space-sm rounded-xl bg-primary text-on-primary font-label-lg text-label-lg hover:bg-primary-container hover:text-on-primary transition-all duration-150 shadow-sm active:scale-95" href="https://wa.me/6281234567890" rel="noopener noreferrer" target="_blank">Pesan Laundry</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-space-xs"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full bg-background"><div class="flex flex-col w-full">
+<!-- Hero Section -->
+<section class="relative w-full px-margin lg:px-margin-lg pt-space-lg pb-space-xl overflow-hidden">
+<div class="absolute -top-32 -left-24 w-96 h-96 rounded-full bg-secondary-container/40 blur-3xl pointer-events-none"></div>
+<div class="absolute top-1/2 -right-32 w-96 h-96 rounded-full bg-primary-fixed/30 blur-3xl pointer-events-none"></div>
+<div class="relative grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<!-- Left Column: Copy & Actions -->
+<div class="lg:col-span-6 flex flex-col items-start space-y-space-md">
+<!-- Micro Badge -->
+<div class="inline-flex items-center gap-space-xs px-space-md py-1.5 rounded-full bg-secondary-container text-on-secondary-container shadow-sm">
+<span class="material-symbols-outlined text-[18px] text-primary" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="font-label-md text-label-md uppercase tracking-wider font-bold">Solusi Pakaian Bersih Bebas Repot</span>
+</div>
+<!-- Headline -->
+<h1 class="font-display-lg text-display-lg font-extrabold text-on-surface tracking-tight leading-tight">
+          Laundry Praktis untuk <span class="text-primary">Anak Kos</span>
+</h1>
+<!-- Subheading -->
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+          Urusan pakaian jadi lebih mudah. Nikmati layanan laundry yang bersih, wangi, dan terjangkau khusus untuk kebutuhan mahasiswa.
+        </p>
+<!-- CTA Buttons -->
+<div class="flex flex-wrap items-center gap-space-md pt-space-xs w-full sm:w-auto">
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs px-space-xl py-space-sm rounded-full bg-primary text-on-primary font-label-lg text-label-lg shadow-md hover:bg-primary-container transition-all duration-200 active:scale-95" href="#layanan">
+<span>Lihat Layanan</span>
+<span class="material-symbols-outlined text-[18px]">arrow_downward</span>
+</a>
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs px-space-lg py-space-sm rounded-full bg-surface-container text-primary font-label-lg text-label-lg hover:bg-surface-variant transition-all duration-200" href="https://wa.me/6281234567890?text=Halo%20LaundryKost,%20saya%20mau%20konsultasi%20laundry%20pakaian" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+<span>Konsultasi via WA</span>
+</a>
+</div>
+<!-- Trust Badges Under Hero CTA -->
+<div class="flex items-center gap-space-lg pt-space-sm">
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-tertiary text-[20px]" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="font-label-md text-label-md">Timbangan Transparan</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-tertiary text-[20px]" style="font-variation-settings: 'FILL' 1;">local_shipping</span>
+<span class="font-label-md text-label-md">Gratis Antar-Jemput Kos</span>
+</div>
+</div>
+</div>
+<!-- Right Column: Visual Inspiration Photo & Floating Badges -->
+<div class="lg:col-span-6 relative flex justify-center lg:justify-end">
+<div class="relative w-full max-w-lg">
+<!-- Main Image Container -->
+<div class="relative rounded-2xl overflow-hidden shadow-xl bg-surface-container-high aspect-[4/3]">
+<img alt="Area laundry modern LaundryKost yang higienis, rapi, dan bersih dengan mesin cuci mutakhir" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0WIY3-qa4xiY6YXCmneBg0Zqvfd76L-4BL3iKedBeD0Twgi7Zu1rKKKkW70VBwWsrunjKtxzMUQ-k6cLaWDcH5YKNj_tjuKigU6Hf5aq3cBmXSnamLU5AQN3fsUzHG0jg4yc-LjjXdQj_6obkZQ_GnJLksqYccQ8xRSeRFXScpSNcW2ANpRTevEoZudKqDWdqda1ZP1H390UZFAr-TUYG4PxmGRwsx7E-nX0ZidTJ49vpUyaFxBRv"/>
+</div>
+<!-- Floating Badge 1 (Top Left) -->
+<div class="absolute -top-4 -left-4 sm:left-2 bg-surface-container-lowest/95 backdrop-blur-md px-space-md py-space-xs rounded-xl shadow-lg flex items-center gap-space-xs transform hover:scale-105 transition-transform duration-200">
+<div class="w-8 h-8 rounded-lg bg-tertiary-fixed flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[20px]">schedule</span>
+</div>
+<div>
+<p class="font-label-md text-label-md font-bold text-on-surface">Tepat Waktu</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Jadwal kuliah aman</p>
+</div>
+</div>
+<!-- Floating Badge 2 (Bottom Right) -->
+<div class="absolute -bottom-4 -right-4 sm:right-2 bg-surface-container-lowest/95 backdrop-blur-md px-space-md py-space-xs rounded-xl shadow-lg flex items-center gap-space-xs transform hover:scale-105 transition-transform duration-200">
+<div class="w-8 h-8 rounded-lg bg-secondary-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">spa</span>
+</div>
+<div>
+<p class="font-label-md text-label-md font-bold text-on-surface">100% Wangi Tahan Lama</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Parfum grade premium</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section Layanan -->
+<section class="w-full px-margin lg:px-margin-lg py-space-xl bg-surface-container-low" id="layanan">
+<div class="max-w-7xl mx-auto flex flex-col items-center">
+<!-- Section Header -->
+<div class="text-center max-w-2xl mb-space-xl">
+<div class="inline-flex items-center gap-space-xs px-space-md py-1 rounded-full bg-primary-fixed text-on-primary-fixed mb-space-xs">
+<span class="material-symbols-outlined text-[16px]">local_laundry_service</span>
+<span class="font-label-md text-label-md uppercase tracking-wider font-bold">Pilihan Layanan</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg font-bold text-on-surface mb-space-xs">Layanan Kami</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+          LaundryKost menyediakan layanan laundry yang praktis, higienis, dan terencana untuk membantu mahasiswa menghemat waktu belajar dan beristirahat.
+        </p>
+</div>
+<!-- Service Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg w-full">
+<!-- Service 1: Cuci Kering -->
+<div class="group bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
+<div class="flex flex-col">
+<div class="w-14 h-14 rounded-2xl bg-secondary-container text-primary flex items-center justify-center mb-space-md group-hover:scale-110 transition-transform duration-300">
+<span class="material-symbols-outlined text-[32px]">air</span>
+</div>
+<h3 class="font-title-md text-title-md font-bold text-on-surface mb-space-xs">Cuci Kering</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+              Cuci bersih dengan detergen premium ramah serat kain dan dikeringkan higienis, siap langsung dilipat rapi di lemari kos.
+            </p>
+</div>
+<div class="pt-space-md border-none bg-surface-container-low/60 p-space-md rounded-xl flex items-center justify-between">
+<div>
+<span class="font-headline-md text-headline-md font-extrabold text-primary">Rp7.000</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant"> / kg</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span class="font-label-md text-label-md">2 hari kerja</span>
+</div>
+</div>
+</div>
+<!-- Service 2: Cuci + Setrika (Favorit) -->
+<div class="group bg-surface-container-lowest rounded-2xl p-space-lg shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
+<div class="absolute top-0 right-0 bg-primary text-on-primary px-space-md py-1 rounded-bl-xl font-label-sm text-label-sm uppercase tracking-wider font-bold">
+            Favorit Mahasiswa
+          </div>
+<div class="flex flex-col">
+<div class="w-14 h-14 rounded-2xl bg-primary-fixed text-primary flex items-center justify-center mb-space-md group-hover:scale-110 transition-transform duration-300">
+<span class="material-symbols-outlined text-[32px]">iron</span>
+</div>
+<h3 class="font-title-md text-title-md font-bold text-on-surface mb-space-xs">Cuci + Setrika</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+              Pakaian dicuci wangi, dikeringkan, dan disetrika uap ekstra rapi sehingga bebas kusut, siap langsung dipakai untuk kuliah dan presentasi.
+            </p>
+</div>
+<div class="pt-space-md border-none bg-primary-fixed/20 p-space-md rounded-xl flex items-center justify-between">
+<div>
+<span class="font-headline-md text-headline-md font-extrabold text-primary">Rp9.000</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant"> / kg</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span class="font-label-md text-label-md">2-3 hari kerja</span>
+</div>
+</div>
+</div>
+<!-- Service 3: Laundry Express -->
+<div class="group bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
+<div class="flex flex-col">
+<div class="w-14 h-14 rounded-2xl bg-tertiary-fixed text-tertiary flex items-center justify-center mb-space-md group-hover:scale-110 transition-transform duration-300">
+<span class="material-symbols-outlined text-[32px]">bolt</span>
+</div>
+<h3 class="font-title-md text-title-md font-bold text-on-surface mb-space-xs">Laundry Express</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+              Pakaian darurat untuk seminar, magang, atau ujian besok hari? Dicuci dan disetrika kilat kilau dalam hitungan jam tanpa kompromi kebersihan.
+            </p>
+</div>
+<div class="pt-space-md border-none bg-surface-container-low/60 p-space-md rounded-xl flex items-center justify-between">
+<div>
+<span class="font-headline-md text-headline-md font-extrabold text-tertiary">Rp15.000</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant"> / kg</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">timer</span>
+<span class="font-label-md text-label-md">6-12 jam selesai</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section Harga & Transparansi -->
+<section class="w-full px-margin lg:px-margin-lg py-space-xl" id="harga">
+<div class="max-w-7xl mx-auto flex flex-col items-center">
+<div class="text-center max-w-2xl mb-space-lg">
+<div class="inline-flex items-center gap-space-xs px-space-md py-1 rounded-full bg-secondary-container text-on-secondary-container mb-space-xs">
+<span class="material-symbols-outlined text-[16px]">payments</span>
+<span class="font-label-md text-label-md uppercase tracking-wider font-bold">Daftar Biaya Bersahabat</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg font-bold text-on-surface mb-space-xs">Harga Terjangkau untuk Mahasiswa</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+          LaundryKost menawarkan harga yang transparan, bersahabat, dan ramah di kantong mahasiswa tanpa biaya tersembunyi.
+        </p>
+</div>
+<!-- Pricing Table / Grid Presentation -->
+<div class="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md mb-space-lg">
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Cuci Kering</span>
+<span class="material-symbols-outlined text-primary">local_laundry_service</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Detergen premium + lipat rapi</p>
+<div class="mt-auto">
+<div class="font-headline-lg text-headline-lg font-extrabold text-primary leading-tight">Rp7.000</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase">per kilogram (kg)</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Cuci + Setrika</span>
+<span class="material-symbols-outlined text-primary">iron</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Setrika uap licin + pewangi tahan lama</p>
+<div class="mt-auto">
+<div class="font-headline-lg text-headline-lg font-extrabold text-primary leading-tight">Rp9.000</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase">per kilogram (kg)</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Laundry Express</span>
+<span class="material-symbols-outlined text-tertiary">bolt</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Selesai 6-12 jam untuk kebutuhan mendesak</p>
+<div class="mt-auto">
+<div class="font-headline-lg text-headline-lg font-extrabold text-tertiary leading-tight">Rp15.000</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase">per kilogram (kg)</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm hover:shadow-md transition-shadow flex flex-col">
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-headline-sm text-headline-sm font-bold text-on-surface">Cuci Sepatu</span>
+<span class="material-symbols-outlined text-primary">roller_skating</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Deep clean, anti-bakteri &amp; kering sempurna</p>
+<div class="mt-auto">
+<div class="font-headline-lg text-headline-lg font-extrabold text-primary leading-tight">Rp20.000</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase">per pasang sepatu</div>
+</div>
+</div>
+</div>
+<!-- Friendly Note for Anak Kos -->
+<div class="w-full bg-secondary-container/40 p-space-md rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-space-md shadow-sm">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-on-primary shrink-0">
+<span class="material-symbols-outlined text-[22px]">info</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface">
+<strong class="font-bold text-primary">Catatan Ramah Anak Kos:</strong> Tersedia timbangan digital transparan &amp; gratis antar-jemput radius kos terdekat!
+          </p>
+</div>
+<a class="shrink-0 px-space-md py-space-xs rounded-full bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-colors" href="https://wa.me/6281234567890?text=Halo%20LaundryKost,%20apakah%20kos%20saya%20masuk%20radius%20gratis%20antar%20jemput?" rel="noopener noreferrer" target="_blank">
+          Cek Radius Kosmu
+        </a>
+</div>
+</div>
+</section>
+<!-- Section Paket Mahasiswa -->
+<section class="w-full px-margin lg:px-margin-lg py-space-xl bg-surface-container-low" id="paket">
+<div class="max-w-7xl mx-auto flex flex-col items-center">
+<div class="text-center max-w-2xl mb-space-xl">
+<div class="inline-flex items-center gap-space-xs px-space-md py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed mb-space-xs">
+<span class="material-symbols-outlined text-[16px]">savings</span>
+<span class="font-label-md text-label-md uppercase tracking-wider font-bold">Hemat Pengeluaran</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg font-bold text-on-surface mb-space-xs">Paket Hemat Anak Kos</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+          Paket dibuat khusus untuk membantu mahasiswa mengelola anggaran bulanan lebih hemat, terkontrol, dan anti-boros.
+        </p>
+</div>
+<!-- Paket Cards Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-lg items-stretch w-full">
+<!-- Paket Mingguan -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-lg transition-all duration-200 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-title-md text-title-md font-bold text-on-surface">Paket Mingguan</span>
+<span class="px-space-sm py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">5 kg / minggu</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+              Pas untuk rotasi pakaian kuliah mingguan santai tanpa cucian menumpuk di kamar kos.
+            </p>
+<div class="mb-space-lg">
+<span class="font-headline-lg text-headline-lg font-extrabold text-on-surface">Rp35.000</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">/ paket</span>
+</div>
+<ul class="space-y-space-sm mb-space-lg text-on-surface-variant font-body-sm text-body-sm">
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span>Cuci + setrika ekstra rapi</span>
+</li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span>Parfum premium aroma pilihan</span>
+</li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span>Gratis plastik packing kedap debu</span>
+</li>
+</ul>
+</div>
+<a class="w-full inline-flex items-center justify-center py-space-sm rounded-full bg-surface-container text-primary font-label-lg text-label-lg hover:bg-surface-variant transition-colors" href="https://wa.me/6281234567890?text=Halo%20LaundryKost,%20saya%20tertarik%20dengan%20Paket%20Mingguan%20Rp35.000" rel="noopener noreferrer" target="_blank">
+            Ambil Paket Ini
+          </a>
+</div>
+<!-- Paket Bulanan (Card Menonjol) -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-xl relative flex flex-col justify-between lg:-translate-y-3">
+<div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-primary text-on-primary px-space-md py-1 rounded-full font-label-md text-label-md uppercase tracking-wider font-bold shadow-md flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span>Paling Hemat • Pilihan Mahasiswa</span>
+</div>
+<div>
+<div class="flex items-center justify-between mb-space-xs pt-space-xs">
+<span class="font-title-md text-title-md font-bold text-primary">Paket Bulanan</span>
+<span class="px-space-sm py-0.5 rounded-full bg-primary-fixed text-primary font-label-sm text-label-sm font-bold">20 kg / bulan</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+              Solusi all-in-one sebulan penuh. Paling favorit di kalangan mahasiswa dan anak rantau.
+            </p>
+<div class="mb-space-lg">
+<span class="font-headline-lg text-headline-lg font-extrabold text-primary">Rp130.000</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">/ bulan</span>
+</div>
+<ul class="space-y-space-sm mb-space-lg text-on-surface-variant font-body-sm text-body-sm">
+<li class="flex items-center gap-space-xs font-semibold text-on-surface">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span>Bebas drop kapan saja (dicicil per 5kg)</span>
+</li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span>Gratis jemput &amp; antar kosan</span>
+</li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span>Prioritas antrean mesin harian</span>
+</li>
+<li class="flex items-center gap-space-xs text-tertiary font-bold">
+<span class="material-symbols-outlined text-tertiary text-[18px]">redeem</span>
+<span>Bonus cuci 1 pasang sepatu</span>
+</li>
+</ul>
+</div>
+<a class="w-full inline-flex items-center justify-center py-space-sm rounded-full bg-primary text-on-primary font-label-lg text-label-lg shadow-md hover:bg-primary-container transition-all active:scale-95" href="https://wa.me/6281234567890?text=Halo%20LaundryKost,%20saya%20mau%20ambil%20Paket%20Bulanan%2020kg%20Rp130.000" rel="noopener noreferrer" target="_blank">
+            Ambil Paket Ini
+          </a>
+</div>
+<!-- Paket Hemat -->
+<div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-lg transition-all duration-200 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-xs">
+<span class="font-title-md text-title-md font-bold text-on-surface">Paket Hemat</span>
+<span class="px-space-sm py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">Kuota 10 kg</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">
+              Pilihan fleksibel untuk kebutuhan cucian 2 minggu atau saat tugas kuliah sedang padat.
+            </p>
+<div class="mb-space-lg">
+<span class="font-headline-lg text-headline-lg font-extrabold text-on-surface">Rp65.000</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">/ paket</span>
+</div>
+<ul class="space-y-space-sm mb-space-lg text-on-surface-variant font-body-sm text-body-sm">
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span>Masa berlaku fleksibel 45 hari</span>
+</li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span>Cuci + setrika halus dan rapi</span>
+</li>
+<li class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">check_circle</span>
+<span>Garansi pakaian wangi segar tahan lama</span>
+</li>
+</ul>
+</div>
+<a class="w-full inline-flex items-center justify-center py-space-sm rounded-full bg-surface-container text-primary font-label-lg text-label-lg hover:bg-surface-variant transition-colors" href="https://wa.me/6281234567890?text=Halo%20LaundryKost,%20saya%20tertarik%20dengan%20Paket%20Hemat%2010kg%20Rp65.000" rel="noopener noreferrer" target="_blank">
+            Ambil Paket Ini
+          </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Section Keunggulan / Mengapa Anak Kos Memilih Kami -->
+<section class="w-full px-margin lg:px-margin-lg py-space-xl">
+<div class="max-w-7xl mx-auto">
+<div class="text-center max-w-2xl mx-auto mb-space-xl">
+<h2 class="font-headline-lg text-headline-lg font-bold text-on-surface mb-space-xs">Mengapa Anak Kos Memilih Kami?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+          Kami mengerti ritme hidup mahasiswa: jadwal kuliah padat, tugas menumpuk, dan butuh pakaian selalu siap pakai.
+        </p>
+</div>
+<!-- 4 Point Bento Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Feature 1 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+<div class="w-12 h-12 rounded-xl bg-primary-fixed text-primary flex items-center justify-center mb-space-md">
+<span class="material-symbols-outlined text-[28px]">scale</span>
+</div>
+<h3 class="font-title-md text-title-md font-bold text-on-surface mb-space-xs">Timbangan Akurat</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Timbangan digital transparan di depan Anda. Tidak ada pembulatan sepihak yang merugikan.
+          </p>
+</div>
+<!-- Feature 2 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+<div class="w-12 h-12 rounded-xl bg-secondary-container text-primary flex items-center justify-center mb-space-md">
+<span class="material-symbols-outlined text-[28px]">sanitizer</span>
+</div>
+<h3 class="font-title-md text-title-md font-bold text-on-surface mb-space-xs">Deterjen Lembut</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Formula ramah serat kain yang menjaga warna baju kesayangan tetap cerah dan tidak cepat pudar.
+          </p>
+</div>
+<!-- Feature 3 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+<div class="w-12 h-12 rounded-xl bg-tertiary-fixed text-tertiary flex items-center justify-center mb-space-md">
+<span class="material-symbols-outlined text-[28px]">temp_preferences_custom</span>
+</div>
+<h3 class="font-title-md text-title-md font-bold text-on-surface mb-space-xs">Wangi Berhari-hari</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Aroma elegan dan segar yang menempel kuat berhari-hari, membuatmu percaya diri di ruang kelas.
+          </p>
+</div>
+<!-- Feature 4 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+<div class="w-12 h-12 rounded-xl bg-primary-fixed text-primary flex items-center justify-center mb-space-md">
+<span class="material-symbols-outlined text-[28px]">near_me</span>
+</div>
+<h3 class="font-title-md text-title-md font-bold text-on-surface mb-space-xs">Dekat Kampus</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Titik drop-off strategis di kantong-kantong kos kampus favorit, didukung kurir ramah dan cepat.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Live Step Tracker Demonstration -->
+<section class="w-full px-margin lg:px-margin-lg pb-space-xl">
+<div class="max-w-7xl mx-auto bg-surface-container-low rounded-2xl p-space-lg sm:p-space-xl">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md mb-space-lg">
+<div>
+<span class="font-label-md text-label-md text-primary font-bold uppercase tracking-wider">Proses Praktis</span>
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface">Pantau Cucianmu Tanpa Cemas</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+          Dari pengambilan di pintu kos sampai kembali terlipat rapi, pantau status cucian via pesan WhatsApp interaktif.
+        </p>
+</div>
+<!-- Step Nodes Visualizer -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md relative">
+<div class="bg-surface-container-lowest p-space-md rounded-xl flex items-center gap-space-md shadow-sm">
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center shrink-0 font-bold font-label-lg">1</div>
+<div>
+<p class="font-label-lg text-label-lg font-bold text-on-surface">Dijemput</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Kurir ambil di depan kamar</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl flex items-center gap-space-md shadow-sm">
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center shrink-0 font-bold font-label-lg">2</div>
+<div>
+<p class="font-label-lg text-label-lg font-bold text-on-surface">Dicuci Higienis</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">1 mesin untuk 1 pelanggan</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl flex items-center gap-space-md shadow-sm">
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center shrink-0 font-bold font-label-lg">3</div>
+<div>
+<p class="font-label-lg text-label-lg font-bold text-on-surface">Disetrika Uap</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Licin rapi &amp; wangi pilihan</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl flex items-center gap-space-md shadow-sm">
+<div class="w-10 h-10 rounded-full bg-tertiary text-on-tertiary flex items-center justify-center shrink-0 font-bold font-label-lg">4</div>
+<div>
+<p class="font-label-lg text-label-lg font-bold text-on-surface">Siap Diantar</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Pakaian kembali ke kosanmu</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final Call To Action Banner -->
+<section class="w-full px-margin lg:px-margin-lg pb-space-xl">
+<div class="max-w-7xl mx-auto rounded-3xl bg-primary text-on-primary p-space-lg sm:p-space-xl relative overflow-hidden shadow-xl">
+<div class="absolute -right-20 -bottom-20 w-80 h-80 rounded-full bg-primary-container blur-2xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-space-lg">
+<div class="max-w-xl text-center md:text-left">
+<h2 class="font-headline-lg text-headline-lg font-extrabold mb-space-xs text-on-primary">
+            Cucian Numpuk? Serahkan Pada Ahlinya!
+          </h2>
+<p class="font-body-lg text-body-lg text-primary-fixed">
+            Pesan penjemputan sekarang, fokus kuliah dan santai bersama teman tanpa beban cucian kotor.
+          </p>
+</div>
+<div class="flex flex-col sm:flex-row items-center gap-space-md w-full sm:w-auto">
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs px-space-xl py-space-md rounded-full bg-surface-container-lowest text-primary font-label-lg text-label-lg shadow-lg hover:bg-surface-variant transition-all duration-150 active:scale-95" href="https://wa.me/6281234567890?text=Halo%20LaundryKost,%20tolong%20jemput%20laundry%20di%20kos%20saya" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-[20px]">local_shipping</span>
+<span>Jemput Cucian Saya Sekarang</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-surface-container-low border-t border-surface-container-high/70 py-space-xl"><div class="w-full px-margin lg:px-margin-lg"><div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-space-lg pb-space-lg"><div class="max-w-md"><div class="flex items-center gap-space-sm text-primary mb-space-xs"><div class="w-8 h-8 rounded-lg bg-primary-fixed flex items-center justify-center text-primary"><span class="material-symbols-outlined text-[20px]">local_laundry_service</span></div><span class="font-headline-sm text-headline-sm font-bold text-primary">LaundryKost</span></div><p class="font-body-md text-body-md text-on-surface-variant">Laundry praktis, bersih, dan terjangkau untuk mahasiswa.</p></div><div class="flex flex-col sm:flex-row items-start sm:items-center gap-space-md"><a class="flex items-center gap-space-xs text-on-surface-variant hover:text-primary transition-colors font-body-sm text-body-sm" href="https://instagram.com/laundrykost.id" rel="noopener noreferrer" target="_blank"><svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg><span>@laundrykost.id</span></a><a class="flex items-center gap-space-xs text-on-surface-variant hover:text-primary transition-colors font-body-sm text-body-sm" href="https://tiktok.com/@laundrykost" rel="noopener noreferrer" target="_blank"><svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-1.01-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.24 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"></path></svg><span>@laundrykost</span></a><a class="flex items-center gap-space-xs text-on-surface-variant hover:text-primary transition-colors font-body-sm text-body-sm" href="https://wa.me/6281234567890" rel="noopener noreferrer" target="_blank"><svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"></path></svg><span>+62 812-3456-7890</span></a></div></div><div class="border-t border-surface-container-highest/40 pt-space-md text-center text-on-surface-variant font-body-sm text-body-sm">© 2026 LaundryKost. All rights reserved.</div></div></footer></body></html>

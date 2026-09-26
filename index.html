@@ -1,0 +1,1610 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="LaundryKost.services laundry bersih, wangi, dan terjangkau untuk mahasiswa dan anak kos. Cuci kering, cuci setrika, dan laundry express dengan harga transparan."
+    />
+    <title>LaundryKost - Laundry Praktis Mahasiswa &amp; Anak Kos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            // Palet warna Material 3: 3 warna aksen (primary/secondary/tertiary)
+            // + skala netral surface. Semua warna diambil dari token aslinya.
+            colors: {
+              primary: "#006194",
+              "on-primary": "#ffffff",
+              "primary-container": "#007bb9",
+              "on-primary-container": "#fdfcff",
+              "primary-fixed": "#cce5ff",
+              "primary-fixed-dim": "#93ccff",
+              "on-primary-fixed": "#001d31",
+              "on-primary-fixed-variant": "#004b73",
+              secondary: "#565e74",
+              "on-secondary": "#ffffff",
+              "secondary-container": "#dae2fd",
+              "on-secondary-container": "#5c647a",
+              "secondary-fixed": "#dae2fd",
+              "secondary-fixed-dim": "#bec6e0",
+              "on-secondary-fixed": "#131b2e",
+              "on-secondary-fixed-variant": "#3f465c",
+              tertiary: "#00685f",
+              "on-tertiary": "#ffffff",
+              "tertiary-container": "#008378",
+              "on-tertiary-container": "#f4fffc",
+              "tertiary-fixed": "#89f5e7",
+              "tertiary-fixed-dim": "#6bd8cb",
+              "on-tertiary-fixed": "#00201d",
+              "on-tertiary-fixed-variant": "#005049",
+              error: "#ba1a1a",
+              "on-error": "#ffffff",
+              "error-container": "#ffdad6",
+              "on-error-container": "#93000a",
+              background: "#f7f9fb",
+              "on-background": "#191c1e",
+              surface: "#f7f9fb",
+              "surface-bright": "#f7f9fb",
+              "surface-dim": "#d8dadc",
+              "surface-tint": "#006398",
+              "on-surface": "#191c1e",
+              "surface-variant": "#e0e3e5",
+              "on-surface-variant": "#3f4850",
+              "surface-container-lowest": "#ffffff",
+              "surface-container-low": "#f2f4f6",
+              "surface-container": "#eceef0",
+              "surface-container-high": "#e6e8ea",
+              "surface-container-highest": "#e0e3e5",
+              "inverse-surface": "#2d3133",
+              "inverse-on-surface": "#eff1f3",
+              "inverse-primary": "#93ccff",
+              outline: "#707881",
+              "outline-variant": "#bfc7d2",
+            },
+            // Skala spacing: "space-*" untuk jarak internal,
+            // "margin*" untuk padding horizontal section, "gutter*" untuk jarak antar item.
+            spacing: {
+              "space-xs": "0.25rem",
+              "space-sm": "0.5rem",
+              "space-md": "1rem",
+              "space-lg": "1.5rem",
+              "space-xl": "2.5rem",
+              margin: "1rem",
+              "margin-md": "2rem",
+              "margin-lg": "3.5rem",
+              gutter: "1rem",
+              "gutter-md": "1.5rem",
+              "gutter-lg": "2rem",
+            },
+            // Font memakai font bawaan sistem, tidak ada font eksternal yang diunduh.
+            fontFamily: {
+              sans: [
+                "system-ui",
+                "-apple-system",
+                "Segoe UI",
+                "Roboto",
+                "Helvetica Neue",
+                "Arial",
+                "sans-serif",
+              ],
+            },
+            // Skala tipografi: dipakai lewat class text-* (mis. text-body-md)
+            // sehingga ukuran, line-height, dan letterSpacing selalu konsisten.
+            fontSize: {
+              "label-sm": [
+                "11px",
+                {
+                  lineHeight: "14px",
+                  letterSpacing: "0.03em",
+                  fontWeight: "700",
+                },
+              ],
+              "body-sm": ["12px", { lineHeight: "18px", fontWeight: "400" }],
+              "label-md": [
+                "12px",
+                {
+                  lineHeight: "16px",
+                  letterSpacing: "0.02em",
+                  fontWeight: "700",
+                },
+              ],
+              "title-md": ["18px", { lineHeight: "26px", fontWeight: "600" }],
+              "headline-sm": [
+                "20px",
+                { lineHeight: "28px", fontWeight: "600" },
+              ],
+              "body-md": ["14px", { lineHeight: "22px", fontWeight: "400" }],
+              "label-lg": [
+                "14px",
+                {
+                  lineHeight: "20px",
+                  letterSpacing: "0.01em",
+                  fontWeight: "600",
+                },
+              ],
+              "headline-md": [
+                "24px",
+                {
+                  lineHeight: "32px",
+                  letterSpacing: "-0.015em",
+                  fontWeight: "700",
+                },
+              ],
+              "body-lg": ["16px", { lineHeight: "26px", fontWeight: "400" }],
+              "headline-lg": [
+                "36px",
+                {
+                  lineHeight: "44px",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "700",
+                },
+              ],
+              "display-lg": [
+                "48px",
+                {
+                  lineHeight: "56px",
+                  letterSpacing: "-0.03em",
+                  fontWeight: "800",
+                },
+              ],
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Styling tambahan: reset dasar, offset scroll untuk header sticky, dll. -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body
+    id="top"
+    class="bg-background font-sans text-body-md text-on-surface antialiased"
+  >
+    <!-- ============================================================
+         SPRITE IKON
+         Seluruh ikon halaman ini digambar sebagai SVG stroke 24x24
+         (gaya outline) dan disimpan sekali di sini sebagai <symbol>.
+         Dipakai di banyak tempat lewat <use href="#i-nama"></use>,
+         sehingga tidak ada icon font yang perlu diunduh.
+         Ikon mewarisi warna teks dari elemen induknya (currentColor).
+         ============================================================ -->
+    <svg
+      class="hidden"
+      aria-hidden="true"
+      focusable="false"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <!-- Logo: mesin cuci -->
+      <symbol
+        id="i-washer"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path
+          d="M20 4H4a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1Z"
+        />
+        <circle cx="12" cy="14" r="4" />
+        <path d="M12 18h.01" />
+        <circle cx="7.5" cy="7" r="1" />
+        <circle cx="10.5" cy="7" r="1" />
+      </symbol>
+
+      <!-- Daftar / centang -->
+      <symbol
+        id="i-check-circle"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <circle cx="12" cy="12" r="10" />
+        <path d="m9 12 2 2 4-4" />
+      </symbol>
+
+      <!-- Jadwal / waktu -->
+      <symbol
+        id="i-clock"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <circle cx="12" cy="12" r="10" />
+        <polyline points="12 6 12 12 16 14" />
+      </symbol>
+
+      <!-- Antar-jemput -->
+      <symbol
+        id="i-truck"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M14 18V6a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h2" />
+        <path d="M14 9h4l4 4v4a1 1 0 0 1-1 1h-1" />
+        <circle cx="7" cy="18" r="2" />
+        <circle cx="17" cy="18" r="2" />
+        <path d="M9 18h6" />
+      </symbol>
+
+      <!-- Kilat / express -->
+      <symbol
+        id="i-bolt"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z" />
+      </symbol>
+
+      <!-- Setrika -->
+      <symbol
+        id="i-iron"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M12 16H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v2" />
+        <path d="M4 9h16" />
+        <path d="M4 14h6" />
+        <path d="M20 16V8h-4" />
+      </symbol>
+
+      <!-- Kilau / unsolved -->
+      <symbol
+        id="i-sparkles"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path
+          d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"
+        />
+        <path d="M5 3v4" />
+        <path d="M3 5h4" />
+        <path d="M19 17v4" />
+        <path d="M17 19h4" />
+      </symbol>
+
+      <!-- Terverifikasi -->
+      <symbol
+        id="i-badge-check"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path
+          d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"
+        />
+        <path d="m9 12 2 2 4-4" />
+      </symbol>
+
+      <!-- Panah ke bawah -->
+      <symbol
+        id="i-arrow-down"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M12 5v14" />
+        <path d="m19 12-7 7-7-7" />
+      </symbol>
+
+      <!-- Air / cuci -->
+      <symbol
+        id="i-droplet"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path
+          d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"
+        />
+      </symbol>
+
+      <!-- Timer -->
+      <symbol
+        id="i-timer"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M10 2h4" />
+        <path d="M12 14v-4" />
+        <circle cx="12" cy="14" r="8" />
+      </symbol>
+
+      <!-- Label harga -->
+      <symbol
+        id="i-tag"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path
+          d="M12.6 2.9a2 2 0 0 0-1.4-.6H4a2 2 0 0 0-2 2v7.2a2 2 0 0 0 .6 1.4l8.4 8.4a2 2 0 0 0 2.8 0l7.2-7.2a2 2 0 0 0 0-2.8Z"
+        />
+        <circle cx="7" cy="7" r="1.25" />
+      </symbol>
+
+      <!-- Cuci bersih -->
+      <symbol
+        id="i-shower"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M4 2v6c0 5.523 4.477 10 10 10h2a4 4 0 0 0 4-4V2H4Z" />
+        <path d="M7 2v3a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V2" />
+        <path d="M13 2v3a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V2" />
+        <path d="M4 22v-1" />
+      </symbol>
+
+      <!-- Informasi -->
+      <symbol
+        id="i-info"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <circle cx="12" cy="12" r="10" />
+        <path d="M12 16v-4" />
+        <path d="M12 8h.01" />
+      </symbol>
+
+      <!-- Dompet / hemat -->
+      <symbol
+        id="i-wallet"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <rect x="3" y="6" width="18" height="13" rx="2.5" />
+        <path d="M3 10.5h18" />
+        <circle cx="16.5" cy="14.75" r="1.25" />
+      </symbol>
+
+      <!-- Bintang / favorit -->
+      <symbol
+        id="i-star"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <polygon
+          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+        />
+      </symbol>
+
+      <!-- Hadiah -->
+      <symbol
+        id="i-gift"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <rect x="3" y="8" width="18" height="4" rx="1" />
+        <path d="M12 8v13" />
+        <path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7" />
+        <path
+          d="M7.5 8a2.5 2.5 0 0 1 0-5C11 3 12 8 12 8s1-5 4.5-5a2.5 2.5 0 0 1 0 5"
+        />
+      </symbol>
+
+      <!-- Timbangan -->
+      <symbol
+        id="i-scale"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z" />
+        <path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z" />
+        <path d="M7 21h10" />
+        <path d="M12 3v18" />
+        <path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2" />
+      </symbol>
+
+      <!-- Semprotan / deterjen -->
+      <symbol
+        id="i-spray"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path
+          d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2Z"
+        />
+        <path d="m10 8 2 2 4-4" />
+        <path d="M7 16h10" />
+      </symbol>
+
+      <!-- Suhu /=wangi tahan lama -->
+      <symbol
+        id="i-thermo"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z" />
+      </symbol>
+
+      <!-- Lokasi -->
+      <symbol
+        id="i-navigation"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <polygon points="3 11 22 2 13 21 11 13 3 11" />
+      </symbol>
+    </svg>
+
+    <!-- ============================================================
+         HEADER / NAVBAR
+         - Kiri: nama judul website (LaundryKost)
+         - Tengah: 2 link navigasi anchor (#layanan, #harga) yang
+           menggulir halaman ke section terkait
+         - Kanan: 1 tombol CTA utama (WhatsApp)
+         ============================================================ -->
+    <header
+      class="sticky top-0 z-50 w-full border-b border-surface-container-highest/60 bg-surface-container-lowest/80 px-margin shadow-[0_1px_8px_rgba(0,0,0,0.04)] backdrop-blur-md lg:px-margin-lg"
+    >
+      <div
+        class="mx-auto flex h-16 max-w-7xl items-center justify-between"
+      >
+        <!-- Nama judul website di sisi kiri -->
+        <a
+          href="#top"
+          class="group flex items-center gap-space-sm text-primary"
+        >
+          <div
+            class="flex h-9 w-9 items-center justify-center rounded-xl bg-primary-fixed text-primary shadow-sm"
+          >
+            <svg class="icon h-[22px] w-[22px]" aria-hidden="true">
+              <use href="#i-washer"></use>
+            </svg>
+          </div>
+          <span class="font-bold leading-tight tracking-tight text-headline-sm"
+            >LaundryKost</span
+          >
+        </a>
+
+        <div class="flex items-center gap-space-md sm:gap-space-lg">
+          <!-- 2 link navigasi menuju section pada halaman ini -->
+          <nav
+            class="hidden items-center gap-space-md sm:flex"
+            aria-label="Navigasi utama"
+          >
+            <a
+              href="#layanan"
+              class="font-bold text-label-lg text-primary transition-colors duration-150 hover:text-primary-container"
+              >Layanan</a
+            >
+            <a
+              href="#harga"
+              class="font-bold text-label-lg text-primary transition-colors duration-150 hover:text-primary-container"
+              >Harga</a
+            >
+          </nav>
+
+          <!-- 1 tombol Call-to-Action yang menonjol -->
+          <a
+            href="https://wa.me/6285643429736"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center rounded-xl bg-primary px-space-md py-space-sm font-semibold text-label-lg text-on-primary shadow-sm transition-all duration-150 hover:bg-primary-container active:scale-95"
+          >
+            Pesan Laundry
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="w-full bg-background">
+      <!-- ============================================================
+           SECTION 1 - HERO (Halaman Utama)
+           Berisi headline utama, sub-judul deskripsi singkat,
+           1 gambar pendukung tema, 1 tombol aksi (CTA),
+           ditambah 2 daftar keunggulan singkat.
+           ============================================================ -->
+      <section
+        class="relative w-full overflow-hidden px-margin pb-space-xl pt-space-lg lg:px-margin-lg"
+      >
+        <!-- Dua blob blur dekoratif sebagai latar -->
+        <div
+          class="pointer-events-none absolute -left-24 -top-32 h-96 w-96 rounded-full bg-secondary-container/40 blur-3xl"
+        ></div>
+        <div
+          class="pointer-events-none absolute -right-32 top-1/2 h-96 w-96 rounded-full bg-primary-fixed/30 blur-3xl"
+        ></div>
+
+        <div
+          class="relative mx-auto grid max-w-7xl grid-cols-1 items-center gap-space-xl lg:grid-cols-12"
+        >
+          <!-- Kolom kiri: teks dan tombol aksi -->
+          <div class="flex flex-col items-start space-y-space-md lg:col-span-6">
+            <!-- Badge kecil di atas judul -->
+            <div
+              class="inline-flex items-center gap-space-xs rounded-full bg-secondary-container px-space-md py-1.5 text-on-secondary-container shadow-sm"
+            >
+              <svg
+                class="icon h-[18px] w-[18px] text-primary"
+                aria-hidden="true"
+              >
+                <use href="#i-sparkles"></use>
+              </svg>
+              <span class="text-label-md uppercase tracking-wider"
+                >Solusi Pakaian Bersih Bebas Repot</span
+              >
+            </div>
+
+            <!-- Judul utama -->
+            <h1
+              class="text-display-lg font-extrabold tracking-tight text-on-surface"
+            >
+              Laundry Praktis untuk <span class="text-primary">Anak Kos</span>
+            </h1>
+
+            <!-- Sub-judul / deskripsi singkat -->
+            <p class="max-w-xl text-body-lg text-on-surface-variant">
+              Urusan pakaian jadi lebih mudah. Nikmati layanan laundry yang
+              bersih, wangi, dan terjangkau khusus untuk kebutuhan mahasiswa.
+            </p>
+
+            <!-- 1 tombol aksi utama menuju section layanan -->
+            <div
+              class="flex w-full flex-wrap items-center gap-space-md pt-space-xs sm:w-auto"
+            >
+              <a
+                href="#layanan"
+                class="inline-flex w-full items-center justify-center gap-space-xs rounded-full bg-primary px-space-xl py-space-sm font-semibold text-label-lg text-on-primary shadow-md transition-all duration-200 hover:bg-primary-container active:scale-95 sm:w-auto"
+              >
+                <span>Lihat Layanan</span>
+                <svg class="icon h-[18px] w-[18px]" aria-hidden="true">
+                  <use href="#i-arrow-down"></use>
+                </svg>
+              </a>
+            </div>
+
+            <!-- Dua penanda kepercayaan di bawah tombol -->
+            <div class="flex items-center gap-space-lg pt-space-sm">
+              <div
+                class="flex items-center gap-space-xs text-on-surface-variant"
+              >
+                <svg
+                  class="icon h-[20px] w-[20px] text-tertiary"
+                  aria-hidden="true"
+                >
+                  <use href="#i-badge-check"></use>
+                </svg>
+                <span class="text-label-md">Timbangan Transparan</span>
+              </div>
+              <div
+                class="flex items-center gap-space-xs text-on-surface-variant"
+              >
+                <svg
+                  class="icon h-[20px] w-[20px] text-tertiary"
+                  aria-hidden="true"
+                >
+                  <use href="#i-truck"></use>
+                </svg>
+                <span class="text-label-md">Gratis Antar-Jemput Kos</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Kolom kanan: gambar utama -->
+          <div
+            class="relative flex justify-center lg:col-span-6 lg:justify-end"
+          >
+            <div class="relative w-full max-w-lg">
+              <!-- Gambar pendukung tema (wajib pada section Hero) -->
+              <!--
+                Sumber gambar: [TEMPATKAN URL LENGKAP SUMBER GAMBAR DI SINI]
+                Contoh: https://unsplash.com/photos/xxxx atau https://www.pexels.com/photo/xxxx/
+                Gambar disimpan lokal di folder "image/" agar tidak bergantung pada link eksternal.
+              -->
+              <div
+                class="relative aspect-[4/3] overflow-hidden rounded-2xl bg-surface-container-high shadow-xl"
+              >
+                <img
+                  src="image/laundry.jpg"
+                  alt="Area laundry modern LaundryKost yang higienis, rapi, dan bersih dengan mesin cuci mutakhir"
+                  class="h-full w-full object-cover"
+                  decoding="async"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="layanan"
+        class="w-full bg-surface-container-low px-margin py-space-xl lg:px-margin-lg"
+      >
+        <div class="mx-auto flex max-w-7xl flex-col items-center">
+          <!-- Judul dan deskripsi section -->
+          <div class="mb-space-xl max-w-2xl text-center">
+            <div
+              class="mb-space-xs inline-flex items-center gap-space-xs rounded-full bg-primary-fixed px-space-md py-1 text-on-primary-fixed"
+            >
+              <svg class="icon h-[16px] w-[16px]" aria-hidden="true">
+                <use href="#i-washer"></use>
+              </svg>
+              <span class="text-label-md uppercase tracking-wider"
+                >Pilihan Layanan</span
+              >
+            </div>
+            <h2 class="mb-space-xs text-headline-lg font-bold text-on-surface">
+              Layanan Kami
+            </h2>
+            <p class="text-body-lg text-on-surface-variant">
+              LaundryKost menyediakan layanan laundry yang praktis, higienis,
+              dan terencana untuk membantu mahasiswa menghemat waktu belajar dan
+              beristirahat.
+            </p>
+          </div>
+
+          <!-- Grid 3 kartu layanan -->
+          <div class="grid w-full grid-cols-1 gap-space-lg md:grid-cols-3">
+            <!-- Kartu 1: Cuci Kering -->
+            <article
+              class="group relative flex flex-col justify-between overflow-hidden rounded-2xl bg-surface-container-lowest p-space-lg shadow-sm transition-all duration-300 hover:shadow-xl"
+            >
+              <div class="flex flex-col">
+                <div
+                  class="mb-space-md flex h-14 w-14 items-center justify-center rounded-2xl bg-secondary-container text-primary transition-transform duration-300 group-hover:scale-110"
+                >
+                  <svg class="icon h-[32px] w-[32px]" aria-hidden="true">
+                    <use href="#i-droplet"></use>
+                  </svg>
+                </div>
+                <h3 class="mb-space-xs text-title-md font-bold text-on-surface">
+                  Cuci Kering
+                </h3>
+                <p class="mb-space-md text-body-md text-on-surface-variant">
+                  Cuci bersih dengan detergen premium ramah serat kain dan
+                  dikeringkan higienis, siap langsung dilipat rapi di lemari
+                  kos.
+                </p>
+              </div>
+              <div
+                class="flex items-center justify-between rounded-xl bg-surface-container-low/60 p-space-md pt-space-md"
+              >
+                <div>
+                  <span class="text-headline-md font-extrabold text-primary"
+                    >Rp7.000</span
+                  >
+                  <span class="text-body-sm text-on-surface-variant">
+                    / kg</span
+                  >
+                </div>
+                <div class="flex items-center gap-1 text-on-surface-variant">
+                  <svg class="icon h-[16px] w-[16px]" aria-hidden="true">
+                    <use href="#i-clock"></use>
+                  </svg>
+                  <span class="text-label-md">2 hari kerja</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Kartu 2: Cuci + Setrika (paling favorit) -->
+            <article
+              class="group relative flex flex-col justify-between overflow-hidden rounded-2xl bg-surface-container-lowest p-space-lg shadow-md transition-all duration-300 hover:shadow-xl"
+            >
+              <div
+                class="absolute right-0 top-0 rounded-bl-xl bg-primary px-space-md py-1 text-label-sm uppercase tracking-wider text-on-primary"
+              >
+                Favorit Mahasiswa
+              </div>
+              <div class="flex flex-col">
+                <div
+                  class="mb-space-md flex h-14 w-14 items-center justify-center rounded-2xl bg-primary-fixed text-primary transition-transform duration-300 group-hover:scale-110"
+                >
+                  <svg class="icon h-[32px] w-[32px]" aria-hidden="true">
+                    <use href="#i-iron"></use>
+                  </svg>
+                </div>
+                <h3 class="mb-space-xs text-title-md font-bold text-on-surface">
+                  Cuci + Setrika
+                </h3>
+                <p class="mb-space-md text-body-md text-on-surface-variant">
+                  Pakaian dicuci wangi, dikeringkan, dan disetrika uap ekstra
+                  rapi sehingga bebas kusut, siap langsung dipakai untuk kuliah
+                  dan presentasi.
+                </p>
+              </div>
+              <div
+                class="flex items-center justify-between rounded-xl bg-primary-fixed/20 p-space-md pt-space-md"
+              >
+                <div>
+                  <span class="text-headline-md font-extrabold text-primary"
+                    >Rp9.000</span
+                  >
+                  <span class="text-body-sm text-on-surface-variant">
+                    / kg</span
+                  >
+                </div>
+                <div class="flex items-center gap-1 text-on-surface-variant">
+                  <svg class="icon h-[16px] w-[16px]" aria-hidden="true">
+                    <use href="#i-clock"></use>
+                  </svg>
+                  <span class="text-label-md">2-3 hari kerja</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Kartu 3: Laundry Express -->
+            <article
+              class="group relative flex flex-col justify-between overflow-hidden rounded-2xl bg-surface-container-lowest p-space-lg shadow-sm transition-all duration-300 hover:shadow-xl"
+            >
+              <div class="flex flex-col">
+                <div
+                  class="mb-space-md flex h-14 w-14 items-center justify-center rounded-2xl bg-tertiary-fixed text-tertiary transition-transform duration-300 group-hover:scale-110"
+                >
+                  <svg class="icon h-[32px] w-[32px]" aria-hidden="true">
+                    <use href="#i-bolt"></use>
+                  </svg>
+                </div>
+                <h3 class="mb-space-xs text-title-md font-bold text-on-surface">
+                  Laundry Express
+                </h3>
+                <p class="mb-space-md text-body-md text-on-surface-variant">
+                  Pakaian darurat untuk seminar, magang, atau ujian besok hari?
+                  Dicuci dan disetrika kilat kilau dalam hitungan jam tanpa
+                  kompromi kebersihan.
+                </p>
+              </div>
+              <div
+                class="flex items-center justify-between rounded-xl bg-surface-container-low/60 p-space-md pt-space-md"
+              >
+                <div>
+                  <span class="text-headline-md font-extrabold text-tertiary"
+                    >Rp15.000</span
+                  >
+                  <span class="text-body-sm text-on-surface-variant">
+                    / kg</span
+                  >
+                </div>
+                <div class="flex items-center gap-1 text-on-surface-variant">
+                  <svg class="icon h-[16px] w-[16px]" aria-hidden="true">
+                    <use href="#i-timer"></use>
+                  </svg>
+                  <span class="text-label-md">6-12 jam selesai</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           SECTION 3 - HARGA
+           Judul + deskripsi section, 4 kartu harga dalam grid,
+           lalu catatan singkat untuk mahasiswa.
+           ============================================================ -->
+      <section id="harga" class="w-full px-margin py-space-xl lg:px-margin-lg">
+        <div class="mx-auto flex max-w-7xl flex-col items-center">
+          <!-- Judul dan deskripsi section -->
+          <div class="mb-space-lg max-w-2xl text-center">
+            <div
+              class="mb-space-xs inline-flex items-center gap-space-xs rounded-full bg-secondary-container px-space-md py-1 text-on-secondary-container"
+            >
+              <svg class="icon h-[16px] w-[16px]" aria-hidden="true">
+                <use href="#i-tag"></use>
+              </svg>
+              <span class="text-label-md uppercase tracking-wider"
+                >Daftar Biaya Bersahabat</span
+              >
+            </div>
+            <h2 class="mb-space-xs text-headline-lg font-bold text-on-surface">
+              Harga Terjangkau untuk Mahasiswa
+            </h2>
+            <p class="text-body-lg text-on-surface-variant">
+              LaundryKost menawarkan harga yang transparan, bersahabat, dan
+              ramah di kantong mahasiswa tanpa biaya tersembunyi.
+            </p>
+          </div>
+
+          <!-- Grid 4 kartu harga -->
+          <div
+            class="mb-space-lg grid w-full grid-cols-1 gap-space-md sm:grid-cols-2 lg:grid-cols-4"
+          >
+            <article
+              class="flex flex-col rounded-xl bg-surface-container-lowest p-space-md shadow-sm transition-shadow hover:shadow-md"
+            >
+              <div class="mb-space-xs flex items-center justify-between">
+                <span class="text-headline-sm font-bold text-on-surface"
+                  >Cuci Kering</span
+                >
+                <svg
+                  class="icon h-[20px] w-[20px] text-primary"
+                  aria-hidden="true"
+                >
+                  <use href="#i-washer"></use>
+                </svg>
+              </div>
+              <p class="mb-space-md text-body-sm text-on-surface-variant">
+                Detergen premium + lipat rapi
+              </p>
+              <div class="mt-auto">
+                <div
+                  class="text-headline-md font-extrabold leading-tight text-primary"
+                >
+                  Rp7.000
+                </div>
+                <div class="text-label-sm uppercase text-on-surface-variant">
+                  per kilogram (kg)
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="flex flex-col rounded-xl bg-surface-container-lowest p-space-md shadow-sm transition-shadow hover:shadow-md"
+            >
+              <div class="mb-space-xs flex items-center justify-between">
+                <span class="text-headline-sm font-bold text-on-surface"
+                  >Cuci + Setrika</span
+                >
+                <svg
+                  class="icon h-[20px] w-[20px] text-primary"
+                  aria-hidden="true"
+                >
+                  <use href="#i-iron"></use>
+                </svg>
+              </div>
+              <p class="mb-space-md text-body-sm text-on-surface-variant">
+                Setrika uap licin + pewangi tahan lama
+              </p>
+              <div class="mt-auto">
+                <div
+                  class="text-headline-md font-extrabold leading-tight text-primary"
+                >
+                  Rp9.000
+                </div>
+                <div class="text-label-sm uppercase text-on-surface-variant">
+                  per kilogram (kg)
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="flex flex-col rounded-xl bg-surface-container-lowest p-space-md shadow-sm transition-shadow hover:shadow-md"
+            >
+              <div class="mb-space-xs flex items-center justify-between">
+                <span class="text-headline-sm font-bold text-on-surface"
+                  >Laundry Express</span
+                >
+                <svg
+                  class="icon h-[20px] w-[20px] text-tertiary"
+                  aria-hidden="true"
+                >
+                  <use href="#i-bolt"></use>
+                </svg>
+              </div>
+              <p class="mb-space-md text-body-sm text-on-surface-variant">
+                Selesai 6-12 jam untuk kebutuhan mendesak
+              </p>
+              <div class="mt-auto">
+                <div
+                  class="text-headline-md font-extrabold leading-tight text-tertiary"
+                >
+                  Rp15.000
+                </div>
+                <div class="text-label-sm uppercase text-on-surface-variant">
+                  per kilogram (kg)
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="flex flex-col rounded-xl bg-surface-container-lowest p-space-md shadow-sm transition-shadow hover:shadow-md"
+            >
+              <div class="mb-space-xs flex items-center justify-between">
+                <span class="text-headline-sm font-bold text-on-surface"
+                  >Cuci Sepatu</span
+                >
+                <svg
+                  class="icon h-[20px] w-[20px] text-primary"
+                  aria-hidden="true"
+                >
+                  <use href="#i-shower"></use>
+                </svg>
+              </div>
+              <p class="mb-space-md text-body-sm text-on-surface-variant">
+                Deep clean, anti-bakteri &amp; kering sempurna
+              </p>
+              <div class="mt-auto">
+                <div
+                  class="text-headline-md font-extrabold leading-tight text-primary"
+                >
+                  Rp20.000
+                </div>
+                <div class="text-label-sm uppercase text-on-surface-variant">
+                  per pasang sepatu
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Catatan ramah anak kos -->
+          <div
+            class="flex w-full flex-col items-center justify-between gap-space-md rounded-2xl bg-secondary-container/40 p-space-md shadow-sm sm:flex-row"
+          >
+            <div class="flex items-center gap-space-md">
+              <div
+                class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary text-on-primary"
+              >
+                <svg class="icon h-[22px] w-[22px]" aria-hidden="true">
+                  <use href="#i-info"></use>
+                </svg>
+              </div>
+              <p class="text-body-md text-on-surface">
+                <strong class="font-bold text-primary"
+                  >Catatan Ramah Anak Kos:</strong
+                >
+                Tersedia timbangan digital transparan &amp; gratis antar-jemput
+                radius kos terdekat!
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           SECTION 4 - PAKET MAHASISWA
+           Judul + deskripsi section, lalu 3 kartu paket.
+           Paket Bulanan dibuat lebih menonjol (naik sedikit di
+           layar besar) karena paling sering dipilih.
+           ============================================================ -->
+      <section
+        id="paket"
+        class="w-full bg-surface-container-low px-margin py-space-xl lg:px-margin-lg"
+      >
+        <div class="mx-auto flex max-w-7xl flex-col items-center">
+          <!-- Judul dan deskripsi section -->
+          <div class="mb-space-xl max-w-2xl text-center">
+            <div
+              class="mb-space-xs inline-flex items-center gap-space-xs rounded-full bg-tertiary-fixed px-space-md py-1 text-on-tertiary-fixed"
+            >
+              <svg class="icon h-[16px] w-[16px]" aria-hidden="true">
+                <use href="#i-wallet"></use>
+              </svg>
+              <span class="text-label-md uppercase tracking-wider"
+                >Hemat Pengeluaran</span
+              >
+            </div>
+            <h2 class="mb-space-xs text-headline-lg font-bold text-on-surface">
+              Paket Hemat Anak Kos
+            </h2>
+            <p class="text-body-lg text-on-surface-variant">
+              Paket dibuat khusus untuk membantu mahasiswa mengelola anggaran
+              bulanan lebih hemat, terkontrol, dan anti-boros.
+            </p>
+          </div>
+
+          <!-- Grid 3 kartu paket -->
+          <div
+            class="grid w-full grid-cols-1 items-stretch gap-space-lg lg:grid-cols-3"
+          >
+            <!-- Paket Mingguan -->
+            <article
+              class="flex flex-col rounded-2xl bg-surface-container-lowest p-space-lg shadow-sm transition-all duration-200 hover:shadow-lg"
+            >
+              <div>
+                <div class="mb-space-xs flex items-center justify-between">
+                  <span class="text-title-md font-bold text-on-surface"
+                    >Paket Mingguan</span
+                  >
+                  <span
+                    class="rounded-full bg-surface-container px-space-sm py-0.5 text-label-sm text-on-surface-variant"
+                    >5 kg / minggu</span
+                  >
+                </div>
+                <p class="mb-space-md text-body-sm text-on-surface-variant">
+                  Pas untuk rotasi pakaian kuliah mingguan santai tanpa cucian
+                  menumpuk di kamar kos.
+                </p>
+                <div class="mb-space-lg">
+                  <span class="text-headline-md font-extrabold text-on-surface"
+                    >Rp35.000</span
+                  >
+                  <span class="text-body-md text-on-surface-variant"
+                    >/ paket</span
+                  >
+                </div>
+                <ul
+                  class="space-y-space-sm text-body-sm text-on-surface-variant"
+                >
+                  <li class="flex items-center gap-space-xs">
+                    <svg
+                      class="icon h-[18px] w-[18px] text-primary"
+                      aria-hidden="true"
+                    >
+                      <use href="#i-check-circle"></use>
+                    </svg>
+                    <span>Cuci + setrika ekstra rapi</span>
+                  </li>
+                  <li class="flex items-center gap-space-xs">
+                    <svg
+                      class="icon h-[18px] w-[18px] text-primary"
+                      aria-hidden="true"
+                    >
+                      <use href="#i-check-circle"></use>
+                    </svg>
+                    <span>Parfum premium aroma pilihan</span>
+                  </li>
+                  <li class="flex items-center gap-space-xs">
+                    <svg
+                      class="icon h-[18px] w-[18px] text-primary"
+                      aria-hidden="true"
+                    >
+                      <use href="#i-check-circle"></use>
+                    </svg>
+                    <span>Gratis plastik packing kedap debu</span>
+                  </li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- Paket Bulanan (kartu menonjol) -->
+            <article
+              class="relative flex flex-col rounded-2xl bg-surface-container-lowest p-space-lg shadow-xl lg:-translate-y-3"
+            >
+              <div
+                class="absolute -top-3.5 left-1/2 flex -translate-x-1/2 items-center gap-1 rounded-full bg-primary px-space-md py-1 text-label-md uppercase tracking-wider text-on-primary shadow-md"
+              >
+                <svg class="icon h-[16px] w-[16px]" aria-hidden="true">
+                  <use href="#i-star"></use>
+                </svg>
+                <span>Paling Hemat &bull; Pilihan Mahasiswa</span>
+              </div>
+              <div>
+                <div
+                  class="mb-space-xs flex items-center justify-between pt-space-xs"
+                >
+                  <span class="text-title-md font-bold text-primary"
+                    >Paket Bulanan</span
+                  >
+                  <span
+                    class="rounded-full bg-primary-fixed px-space-sm py-0.5 text-label-sm font-bold text-primary"
+                    >20 kg / bulan</span
+                  >
+                </div>
+                <p class="mb-space-md text-body-sm text-on-surface-variant">
+                  Solusi all-in-one sebulan penuh. Paling favorit di kalangan
+                  mahasiswa dan anak rantau.
+                </p>
+                <div class="mb-space-lg">
+                  <span class="text-headline-md font-extrabold text-primary"
+                    >Rp130.000</span
+                  >
+                  <span class="text-body-md text-on-surface-variant"
+                    >/ bulan</span
+                  >
+                </div>
+                <ul
+                  class="space-y-space-sm text-body-sm text-on-surface-variant"
+                >
+                  <li
+                    class="flex items-center gap-space-xs font-semibold text-on-surface"
+                  >
+                    <svg
+                      class="icon h-[18px] w-[18px] text-primary"
+                      aria-hidden="true"
+                    >
+                      <use href="#i-check-circle"></use>
+                    </svg>
+                    <span>Bebas drop kapan saja (dicicil per 5kg)</span>
+                  </li>
+                  <li class="flex items-center gap-space-xs">
+                    <svg
+                      class="icon h-[18px] w-[18px] text-primary"
+                      aria-hidden="true"
+                    >
+                      <use href="#i-check-circle"></use>
+                    </svg>
+                    <span>Gratis jemput &amp; antar kosan</span>
+                  </li>
+                  <li class="flex items-center gap-space-xs">
+                    <svg
+                      class="icon h-[18px] w-[18px] text-primary"
+                      aria-hidden="true"
+                    >
+                      <use href="#i-check-circle"></use>
+                    </svg>
+                    <span>Prioritas antrean mesin harian</span>
+                  </li>
+                  <li
+                    class="flex items-center gap-space-xs font-bold text-tertiary"
+                  >
+                    <svg
+                      class="icon h-[18px] w-[18px] text-tertiary"
+                      aria-hidden="true"
+                    >
+                      <use href="#i-gift"></use>
+                    </svg>
+                    <span>Bonus cuci 1 pasang sepatu</span>
+                  </li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- Paket Hemat -->
+            <article
+              class="flex flex-col rounded-2xl bg-surface-container-lowest p-space-lg shadow-sm transition-all duration-200 hover:shadow-lg"
+            >
+              <div>
+                <div class="mb-space-xs flex items-center justify-between">
+                  <span class="text-title-md font-bold text-on-surface"
+                    >Paket Hemat</span
+                  >
+                  <span
+                    class="rounded-full bg-surface-container px-space-sm py-0.5 text-label-sm text-on-surface-variant"
+                    >Kuota 10 kg</span
+                  >
+                </div>
+                <p class="mb-space-md text-body-sm text-on-surface-variant">
+                  Pilihan fleksibel untuk kebutuhan cucian 2 minggu atau saat
+                  tugas kuliah sedang padat.
+                </p>
+                <div class="mb-space-lg">
+                  <span class="text-headline-md font-extrabold text-on-surface"
+                    >Rp65.000</span
+                  >
+                  <span class="text-body-md text-on-surface-variant"
+                    >/ paket</span
+                  >
+                </div>
+                <ul
+                  class="space-y-space-sm text-body-sm text-on-surface-variant"
+                >
+                  <li class="flex items-center gap-space-xs">
+                    <svg
+                      class="icon h-[18px] w-[18px] text-primary"
+                      aria-hidden="true"
+                    >
+                      <use href="#i-check-circle"></use>
+                    </svg>
+                    <span>Masa berlaku fleksibel 45 hari</span>
+                  </li>
+                  <li class="flex items-center gap-space-xs">
+                    <svg
+                      class="icon h-[18px] w-[18px] text-primary"
+                      aria-hidden="true"
+                    >
+                      <use href="#i-check-circle"></use>
+                    </svg>
+                    <span>Cuci + setrika halus dan rapi</span>
+                  </li>
+                  <li class="flex items-center gap-space-xs">
+                    <svg
+                      class="icon h-[18px] w-[18px] text-primary"
+                      aria-hidden="true"
+                    >
+                      <use href="#i-check-circle"></use>
+                    </svg>
+                    <span>Garansi pakaian wangi segar tahan lama</span>
+                  </li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           SECTION 5 - KEUNGGULAN
+           Judul + deskripsi section, lalu 4 kartu keunggulan
+           (bento grid) yang menjelaskan alasan memilih layanan ini.
+           ============================================================ -->
+      <section
+        id="keunggulan"
+        class="w-full px-margin py-space-xl lg:px-margin-lg"
+      >
+        <div class="mx-auto max-w-7xl">
+          <!-- Judul dan deskripsi section -->
+          <div class="mx-auto mb-space-xl max-w-2xl text-center">
+            <h2 class="mb-space-xs text-headline-lg font-bold text-on-surface">
+              Mengapa Anak Kos Memilih Kami?
+            </h2>
+            <p class="text-body-lg text-on-surface-variant">
+              Kami mengerti ritme hidup mahasiswa: jadwal kuliah padat, tugas
+              menumpuk, dan butuh pakaian selalu siap pakai.
+            </p>
+          </div>
+
+          <!-- Grid 4 kartu keunggulan -->
+          <div
+            class="grid grid-cols-1 gap-space-md sm:grid-cols-2 lg:grid-cols-4"
+          >
+            <article
+              class="rounded-2xl bg-surface-container-lowest p-space-lg shadow-sm transition-shadow hover:shadow-md"
+            >
+              <div
+                class="mb-space-md flex h-12 w-12 items-center justify-center rounded-xl bg-primary-fixed text-primary"
+              >
+                <svg class="icon h-[28px] w-[28px]" aria-hidden="true">
+                  <use href="#i-scale"></use>
+                </svg>
+              </div>
+              <h3 class="mb-space-xs text-title-md font-bold text-on-surface">
+                Timbangan Akurat
+              </h3>
+              <p class="text-body-md text-on-surface-variant">
+                Timbangan digital transparan di depan Anda. Tidak ada pembulatan
+                sepihak yang merugikan.
+              </p>
+            </article>
+
+            <article
+              class="rounded-2xl bg-surface-container-lowest p-space-lg shadow-sm transition-shadow hover:shadow-md"
+            >
+              <div
+                class="mb-space-md flex h-12 w-12 items-center justify-center rounded-xl bg-secondary-container text-primary"
+              >
+                <svg class="icon h-[28px] w-[28px]" aria-hidden="true">
+                  <use href="#i-spray"></use>
+                </svg>
+              </div>
+              <h3 class="mb-space-xs text-title-md font-bold text-on-surface">
+                Deterjen Lembut
+              </h3>
+              <p class="text-body-md text-on-surface-variant">
+                Formula ramah serat kain yang menjaga warna baju kesayangan
+                tetap cerah dan tidak cepat pudar.
+              </p>
+            </article>
+
+            <article
+              class="rounded-2xl bg-surface-container-lowest p-space-lg shadow-sm transition-shadow hover:shadow-md"
+            >
+              <div
+                class="mb-space-md flex h-12 w-12 items-center justify-center rounded-xl bg-tertiary-fixed text-tertiary"
+              >
+                <svg class="icon h-[28px] w-[28px]" aria-hidden="true">
+                  <use href="#i-thermo"></use>
+                </svg>
+              </div>
+              <h3 class="mb-space-xs text-title-md font-bold text-on-surface">
+                Wangi Berhari-hari
+              </h3>
+              <p class="text-body-md text-on-surface-variant">
+                Aroma elegan dan segar yang menempel kuat berhari-hari,
+                membuatmu percaya diri di ruang kelas.
+              </p>
+            </article>
+
+            <article
+              class="rounded-2xl bg-surface-container-lowest p-space-lg shadow-sm transition-shadow hover:shadow-md"
+            >
+              <div
+                class="mb-space-md flex h-12 w-12 items-center justify-center rounded-xl bg-primary-fixed text-primary"
+              >
+                <svg class="icon h-[28px] w-[28px]" aria-hidden="true">
+                  <use href="#i-navigation"></use>
+                </svg>
+              </div>
+              <h3 class="mb-space-xs text-title-md font-bold text-on-surface">
+                Dekat Kampus
+              </h3>
+              <p class="text-body-md text-on-surface-variant">
+                Titik drop-off strategis di kantong-kantong kos kampus favorit,
+                didukung kurir ramah dan cepat.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           SECTION 6 - ALUR PROSES
+           Judul + deskripsi, lalu 4 node alur laundry
+           (diambil -> dicuci -> disetrika -> diantar) agar
+           pelanggan tahu apa yang terjadi pada cuciannya.
+           ============================================================ -->
+      <section id="proses" class="w-full px-margin pb-space-xl lg:px-margin-lg">
+        <div
+          class="mx-auto max-w-7xl rounded-2xl bg-surface-container-low p-space-lg sm:p-space-xl"
+        >
+          <div
+            class="mb-space-lg flex flex-col justify-between gap-space-md md:flex-row md:items-center"
+          >
+            <div>
+              <span class="text-label-md uppercase tracking-wider text-primary"
+                >Proses Praktis</span
+              >
+              <h2 class="text-headline-md font-bold text-on-surface">
+                Pantau Cucianmu Tanpa Cemas
+              </h2>
+            </div>
+            <p class="max-w-md text-body-md text-on-surface-variant">
+              Dari pengambilan di pintu kos sampai kembali terlipat rapi, pantau
+              status cucian via pesan WhatsApp interaktif.
+            </p>
+          </div>
+
+          <!-- 4 node alur -->
+          <div
+            class="relative grid grid-cols-1 gap-space-md sm:grid-cols-2 lg:grid-cols-4"
+          >
+            <div
+              class="flex items-center gap-space-md rounded-xl bg-surface-container-lowest p-space-md shadow-sm"
+            >
+              <div
+                class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary text-label-lg font-bold text-on-primary"
+              >
+                1
+              </div>
+              <div>
+                <p class="text-label-lg font-bold text-on-surface">Dijemput</p>
+                <p class="text-body-sm text-on-surface-variant">
+                  Kurir ambil di depan kamar
+                </p>
+              </div>
+            </div>
+            <div
+              class="flex items-center gap-space-md rounded-xl bg-surface-container-lowest p-space-md shadow-sm"
+            >
+              <div
+                class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary text-label-lg font-bold text-on-primary"
+              >
+                2
+              </div>
+              <div>
+                <p class="text-label-lg font-bold text-on-surface">
+                  Dicuci Higienis
+                </p>
+                <p class="text-body-sm text-on-surface-variant">
+                  1 mesin untuk 1 pelanggan
+                </p>
+              </div>
+            </div>
+            <div
+              class="flex items-center gap-space-md rounded-xl bg-surface-container-lowest p-space-md shadow-sm"
+            >
+              <div
+                class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary text-label-lg font-bold text-on-primary"
+              >
+                3
+              </div>
+              <div>
+                <p class="text-label-lg font-bold text-on-surface">
+                  Disetrika Uap
+                </p>
+                <p class="text-body-sm text-on-surface-variant">
+                  Licin rapi &amp; wangi pilihan
+                </p>
+              </div>
+            </div>
+            <div
+              class="flex items-center gap-space-md rounded-xl bg-surface-container-lowest p-space-md shadow-sm"
+            >
+              <div
+                class="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-tertiary text-label-lg font-bold text-on-tertiary"
+              >
+                4
+              </div>
+              <div>
+                <p class="text-label-lg font-bold text-on-surface">
+                  Siap Diantar
+                </p>
+                <p class="text-body-sm text-on-surface-variant">
+                  Pakaian kembali ke kosanmu
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================================
+           SECTION 7 - CALL TO ACTION PENUTUP
+           Blok penutup berisi ajakan aksi dan 1 tombol besar
+           menuju WhatsApp untuk menjemput cucian.
+           ============================================================ -->
+      <section id="cta" class="w-full px-margin pb-space-xl lg:px-margin-lg">
+        <div
+          class="relative mx-auto max-w-7xl overflow-hidden rounded-3xl bg-primary p-space-lg text-on-primary shadow-xl sm:p-space-xl"
+        >
+          <div
+            class="pointer-events-none absolute -bottom-20 -right-20 h-80 w-80 rounded-full bg-primary-container blur-2xl"
+          ></div>
+          <div
+            class="relative z-10 flex flex-col items-center justify-between gap-space-lg md:flex-row"
+          >
+            <div class="max-w-xl text-center md:text-left">
+              <h2 class="mb-space-xs text-headline-lg font-extrabold">
+                Cucian Numpuk? Serahkan Pada Ahlinya!
+              </h2>
+              <p class="text-body-lg text-primary-fixed">
+                Pesan penjemputan sekarang, fokus kuliah dan santai bersama
+                teman tanpa beban cucian kotor.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============================================================
+         FOOTER
+         Berisi nama judul website, deskripsi singkat,
+         3 media sosial, dan informasi hak cipta.
+         ============================================================ -->
+    <footer
+      class="w-full border-t border-surface-container-high/70 bg-surface-container-low py-space-xl"
+    >
+      <div class="w-full px-margin lg:px-margin-lg">
+        <div class="mx-auto max-w-7xl">
+          <div
+            class="flex flex-col items-start justify-between gap-space-lg pb-space-lg md:flex-row md:items-center"
+          >
+            <!-- Nama judul website + deskripsi singkat -->
+            <div class="max-w-md">
+              <div
+                class="mb-space-xs flex items-center gap-space-sm text-primary"
+              >
+                <div
+                  class="flex h-8 w-8 items-center justify-center rounded-lg bg-primary-fixed text-primary"
+                >
+                  <svg class="icon h-[20px] w-[20px]" aria-hidden="true">
+                    <use href="#i-washer"></use>
+                  </svg>
+                </div>
+                <span class="text-headline-sm font-bold">LaundryKost</span>
+              </div>
+              <p class="text-body-md text-on-surface-variant">
+                Laundry praktis, bersih, dan terjangkau untuk mahasiswa.
+              </p>
+            </div>
+
+            <!-- 3 media sosial: Instagram, TikTok, YouTube -->
+            <div
+              class="flex flex-col items-start gap-space-md sm:flex-row sm:items-center"
+            >
+              <a
+                href="https://instagram.com/laundrykost.id"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center gap-space-xs text-body-sm text-on-surface-variant transition-colors hover:text-primary"
+              >
+                <svg
+                  class="icon h-5 w-5"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                  />
+                </svg>
+                <span>@laundrykost.id</span>
+              </a>
+
+              <a
+                href="https://tiktok.com/@laundrykost"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center gap-space-xs text-body-sm text-on-surface-variant transition-colors hover:text-primary"
+              >
+                <svg
+                  class="icon h-5 w-5"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-1.01-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.24 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"
+                  />
+                </svg>
+                <span>@laundrykost</span>
+              </a>
+
+              <a
+                href="https://youtube.com/@laundrykost"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center gap-space-xs text-body-sm text-on-surface-variant transition-colors hover:text-primary"
+              >
+                <svg
+                  class="icon h-5 w-5"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M23.498 6.186a2.94 2.94 0 0 0-2.064-2.064C19.71 3.6 12 3.6 12 3.6s-7.71 0-9.434.522A2.94 2.94 0 0 0 .502 6.186C0 7.91 0 12 0 12s0 4.09.502 5.814a2.94 2.94 0 0 0 2.064 2.064C4.29 20.4 12 20.4 12 20.4s7.71 0 9.434-.522a2.94 2.94 0 0 0 2.064-2.064C24 16.09 24 12 24 12s0-4.09-.502-5.814ZM9.6 15.6V8.4l6.4 3.6-6.4 3.6Z"
+                  />
+                </svg>
+                <span>@laundrykost</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Hak cipta -->
+          <div
+            class="border-t border-surface-container-highest/40 pt-space-md text-center text-body-sm text-on-surface-variant"
+          >
+            &copy; 2026 LaundryKost. All rights reserved.
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

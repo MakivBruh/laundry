@@ -1,0 +1,152 @@
+/* ============================================================
+   LaundryKost - style.css
+   Styling tambahan yang menyertai index.html.
+
+   Division of labour:
+   - index.html  -> struktur halaman + utility class Tailwind
+                    (spacing, warna, tipografi, layout, hover)
+   - style.css   -> hal yang utility class tidak bisa /
+                    lebih nyaman ditulis manual:
+                    reset dasar, perilaku scroll, ikon inline,
+                    dan beberapa default aksesibilitas.
+
+   Catatan: semua class utility tetap ditulis di dalam index.html
+   (sesuai ketentuan "gunakan utility class Tailwind secara konsisten").
+   File ini tidak menimpa warna/layout yang sudah diatur Tailwind.
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   1. RESET DASAR
+   ------------------------------------------------------------ */
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    /* Menggulir halus saat link navbar diklik.
+       class="scroll-smooth" pada <html> melakukan hal yang sama;
+       deklarasi ini menjadi cadangan jika class tersebut dihapus. */
+    scroll-behavior: smooth;
+
+    /* Offset 5rem (= tinggi header sticky 4rem + jarak aman 1rem).
+       Tanpa ini, judul section akan tertutup header saat
+       pengguna menekan link "Layanan" atau "Harga" di navbar. */
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+
+    /* Mencegah efek "rubber band" saat halaman di-drag
+       di perangkat sentuh. */
+    overscroll-behavior-y: none;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Teks yang dipilih pengguna memakai warna aksen primer
+     agar konsisten dengan palet halaman. */
+  ::selection {
+    background-color: #cce5ff; /* primary-fixed */
+    color: #001d31; /* on-primary-fixed */
+  }
+
+  /* Hierarki tipografi: judul diratakan otomatis agar
+     tidak menyisakan satu kata sendirian di baris terakhir. */
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  /* Paragraf: izinkan baris terakhirnya terisi penuh
+     agar jarak antar baris terasa lebih natural. */
+  p,
+  li {
+    text-wrap: pretty;
+  }
+
+  /* Fokus keyboard (Navigasi via Tab) harus selalu terlihat
+     dan tidak boleh dihapus tanpa pengganti. */
+  :focus-visible {
+    outline: 2px solid #006194; /* primary */
+    outline-offset: 2px;
+    border-radius: 0.25rem;
+  }
+}
+
+/* ------------------------------------------------------------
+   2. ICON SVG INLINE
+   Ikon di halaman ini adalah <svg><use href="#i-nama"></use></svg>
+   yang dirujuk ke <symbol> di dalam <svg class="hidden">.
+   ----------------------------------------------
+   .icon wajib supaya:
+   a) ikon tidak ikut gepeng di dalam flex container,
+   b) ikon tidak ikut membesar bersama teks (flex-shrink).
+   Ukuran tetap dikendalikan lewat class w-* / h-* dari Tailwind.
+   ------------------------------------------------------------ */
+.icon {
+  display: inline-block;
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+
+/* Fallback: kalau <use> gagal dimuat, <svg> tidak akan
+   mengambil ruang kosong yang aneh di dalam teks. */
+.icon:not(:defined) {
+  display: none;
+}
+
+/* ------------------------------------------------------------
+   3. GAMBAR
+   Semua gambar wajib punya alt. Aturan di bawah memastikan
+   gambar tidak keluar dari kotak section dan tetap rapi
+   di layar kecil.
+   ------------------------------------------------------------ */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ------------------------------------------------------------
+   4. AKSESIBILITAS
+   Hormati pengaturan sistem pengguna yang sensitif terhadap
+   animasi: matikan transisi/animasi yang tidak esensial.
+   ------------------------------------------------------------ */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ------------------------------------------------------------
+   5. CETAK
+   Warna printer sering tidak bisa mencetak latar gelap,
+   jadi tombol CTA dan banner biru dibuat gelap di atas kertas putih.
+   ------------------------------------------------------------ */
+@media print {
+  .bg-primary {
+    background-color: #ffffff !important;
+    color: #191c1e !important;
+  }
+
+  a[href^="https://wa.me"]::after {
+    content: " (kontak via WhatsApp)";
+    font-size: 0.75em;
+  }
+}
